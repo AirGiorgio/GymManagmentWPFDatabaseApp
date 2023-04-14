@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Gym_Managment_Test</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Image\0002855_bodybuilder-16-weightlifting-gym-decor-silhouette-decals_550.jpg" />
+    <None Remove="Image\1.png" />
+    <None Remove="Image\179b4b4e65fe8bd9f5f8b7a03ee6febc.png" />
+    <None Remove="Image\676-6766767_woman-female-weightlifter-silhouette-hd-png-download.png" />
+    <None Remove="Image\Gym-Silhoutte-PNG-Transparent.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Image\0002855_bodybuilder-16-weightlifting-gym-decor-silhouette-decals_550.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Gym-Silhoutte-PNG-Transparent.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Image\179b4b4e65fe8bd9f5f8b7a03ee6febc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\676-6766767_woman-female-weightlifter-silhouette-hd-png-download.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

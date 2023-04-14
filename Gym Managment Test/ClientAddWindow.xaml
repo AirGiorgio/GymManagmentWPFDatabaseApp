@@ -1,0 +1,72 @@
+﻿<Window  x:Class="Gym_Managment_Test.ClientAddView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gym_Managment_Test"
+        xmlns:wpfx="clr-namespace:Xceed.Wpf.Toolkit.Obselete;assembly=Xceed.Wpf.Toolkit.NET5"
+        mc:Ignorable="d"
+        Title="AddWindow" 
+          Background ="#FE181545" 
+        WindowState="Maximized"
+        WindowStyle="None"
+    xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="210"/>
+            <RowDefinition Height="210"/>
+            <RowDefinition Height="210"/>
+            <RowDefinition Height="210"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="480"/>
+            <ColumnDefinition Width="480"/>
+            <ColumnDefinition Width="480"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="20,0,10,10" Grid.Row="0" Grid.Column="0">
+            <GroupBox Padding="40" BorderBrush="White" BorderThickness="1" FontStyle="Italic" FontWeight="Bold" Foreground="White" Header="Imię" FontSize="32" >
+                <TextBox x:Name="Name" FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" TabIndex="1" KeyDown="Ikeychanged" ></TextBox>
+            </GroupBox>
+        </StackPanel>
+        <StackPanel Margin="20,0,10,10" Grid.Row="1" Grid.Column="0">
+            <GroupBox Padding="40" BorderBrush="White" BorderThickness="1" FontStyle="Italic" FontWeight="Bold" Foreground="White" Header="Telefon" FontSize="32" >
+                <TextBox x:Name="Telephone" FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" TabIndex="3" KeyDown="Wkeychanged"></TextBox>
+            </GroupBox>
+        </StackPanel>
+        <StackPanel Margin="20,0,10,10" Grid.Row="0" Grid.Column="1">
+            <GroupBox Padding="40" BorderBrush="White" BorderThickness="1" FontStyle="Italic" FontWeight="Bold" Foreground="White" Header="Nazwisko" FontSize="32" >
+                <TextBox x:Name="Surname" FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" TabIndex="2" KeyDown="Ikeychanged" />
+            </GroupBox>
+        </StackPanel>
+        <StackPanel Margin="20,0,10,10" Grid.Row="1" Grid.Column="1">
+            <GroupBox Padding="40" BorderBrush="White" BorderThickness="1" FontStyle="Italic" FontWeight="Bold" Foreground="White" Header="PESEL" FontSize="32" >
+                <TextBox x:Name="PESEL"  FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" TabIndex="4" KeyDown="Wkeychanged" ></TextBox>
+            </GroupBox>
+        </StackPanel>
+        <Button x:Name="Return" Grid.Row="3" Grid.Column="1" Margin="50" Background ="#FF4F33E1" FontSize="36" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" BorderBrush="#FFC63CA6" BorderThickness="5" Click="Return_Click" TabIndex="18">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources> Powrót
+        </Button>
+        <Button x:Name="Add" Grid.Row="3" Grid.Column="0" Margin="50" Background ="#FF4F33E1" FontSize="36" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" BorderBrush="#FFC63CA6" BorderThickness="5" TabIndex="17" Click="Add_Click" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources> Dodaj
+        </Button>
+        <StackPanel Margin="20,0,10,10" Grid.Row="2" Grid.Column="1">
+            <GroupBox x:Name="combo" Padding="40" BorderBrush="White" BorderThickness="1" FontStyle="Italic" FontWeight="Bold" Foreground="White" Header="Kategoria karnetu" FontSize="32" >
+                <ComboBox x:Name="category"  FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" BorderBrush="White" TabIndex="6" ></ComboBox>
+            </GroupBox>
+        </StackPanel>
+        <StackPanel Margin="20,0,10,10" Grid.Row="2" Grid.Column="0">
+            <GroupBox Padding="40" BorderBrush="White" BorderThickness="1" FontStyle="Italic" FontWeight="Bold" Foreground="White" Header="Data Urodzenia" FontSize="32" >
+                <wpfx:MaskedTextBox x:Name="BirthDate" Mask="0000-00-00" FontFamily="Sitka Small" FontSize="40" Foreground="#FFC63CA6"  FontWeight="Bold" TabIndex="5"></wpfx:MaskedTextBox>
+            </GroupBox>
+        </StackPanel>
+        <Image Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" Source="Image\Gym-Silhoutte-PNG-Transparent.png"></Image>
+    </Grid>
+</Window>

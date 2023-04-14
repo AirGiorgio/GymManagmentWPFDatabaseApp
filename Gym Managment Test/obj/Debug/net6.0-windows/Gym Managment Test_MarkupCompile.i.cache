@@ -1,0 +1,20 @@
+﻿Gym Managment Test
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\
+Gym_Managment_Test
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\App.xaml
+9570802478
+51285509070
+271937799278
+2221599389632
+ClientAddWindow.xaml;ClientViewWindow.xaml;ConfirmationWindow.xaml;ErrorWindow.xaml;ExtendWindow.xaml;FinancialStatisticsWindow.xaml;LoginWindow.xaml;MainMenuWindow.xaml;SetPricesWindow.xaml;
+
+True
+

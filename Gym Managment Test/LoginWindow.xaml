@@ -1,0 +1,66 @@
+﻿<Window x:Class="Gym_Managment_Test.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gym_Managment_Test"
+        mc:Ignorable="d"
+        Title="LoginWindow" 
+        MaxHeight="1000"
+        MaxWidth="800"
+        WindowStyle="None"
+        Background="#FF181545"
+        KeyDown="OnKeyDownHandler">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="1" Grid.Column="1" Background="#FFB71090" Margin ="10" CornerRadius="50" ></Border>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="10">
+            <Label Content="Login" Foreground="White" FontWeight="Bold" FontSize="48" FontFamily ="Sitka Small" HorizontalAlignment="Center"/>
+            <Separator Background="#FF181545">
+                <Separator.RenderTransform>
+                    <ScaleTransform ScaleY="5" />
+                </Separator.RenderTransform>
+            </Separator>
+            <Label x:Name="Userlabel" Content="Użytkownik" Foreground="White" FontFamily="Sitka Small" FontWeight="Bold" FontSize="18"></Label>
+            <TextBox x:Name="User" Margin="10,0,10,0" FontSize="32" Foreground="#FF4F33E1" Background="White"></TextBox>
+            <Label x:Name="Passlabel" Content="Hasło" Foreground="White" FontWeight="Bold" FontFamily="Sitka Small" FontSize="18"></Label>
+            <PasswordBox x:Name="Password" Margin="10,0,10,0" FontSize="32" Foreground="#FF4F33E1" ></PasswordBox>
+            <StackPanel Margin="40,20,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="150"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name ="Login" Grid.Column="0" Margin="0,0,10,0"  Background ="#FF4F33E1" FontSize="24" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" BorderBrush="#FF181545" BorderThickness="5" Click="Login_Click" >
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="20"/>
+                            </Style>
+                        </Button.Resources>
+                        Zaloguj
+                    </Button>
+                    <Button x:Name ="Exit" Grid.Column="1" Margin="10,0,0,0" Background ="#FF4F33E1" FontSize="24" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" BorderBrush="#FF181545" BorderThickness="5" Click="Exit_Click" >
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="20"/>
+                            </Style>
+                        </Button.Resources> Wyjście
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+        <Label x:Name="Errorlbl" Grid.Row="1" Content="Nieprawidłowe dane logowania!" Foreground="#FFE3FF16" FontSize="16" Margin="80,308,80,10" Grid.Column="1"/>
+    </Grid>
+</Window>

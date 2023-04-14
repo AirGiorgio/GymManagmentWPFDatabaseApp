@@ -1,0 +1,58 @@
+﻿<Window x:Class="Gym_Managment_Test.FinancialStatistics"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gym_Managment_Test"
+        mc:Ignorable="d"
+        Title="FinancialStatistics"
+        Background ="#FF181545" 
+        WindowState="Maximized"
+        WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="800"/>
+            <ColumnDefinition Width="600"/>
+        </Grid.ColumnDefinitions>
+        <Border  Background="#FF4F33E1" Margin ="69,45,44,50" CornerRadius="100" Grid.ColumnSpan="3" Grid.RowSpan="4"/>
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Klientów ogółem:" Margin="96,59,217,87" Grid.Column="1" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Aktywnych karnetów: " Margin="24,135,218,199" Grid.Column="1" Grid.RowSpan="2" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Karnetów Open: " Margin="114,40,221,104" Grid.Row="1" Grid.Column="1" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Karnetów Half-Open:" Margin="34,133,220,12" Grid.Row="1" Grid.Column="1" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Karnetów Limited:" Margin="68,41,219,103" Grid.Row="2" Grid.Column="1" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Karnetów Student:" Margin="67,132,216,13" Grid.Row="2" Grid.Column="1" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Sumaryczne dochody" Margin="179,72,272,72"></Label> 
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Z karnetów:" Margin="310,10,287,135" Grid.Row="3" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Z usług:" Margin="372,82,284,62" Grid.Row="3" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Różnica przychodów: " Margin="168,30,284,114" Grid.Row="2" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Procent zmiany:" Margin="240,119,284,26" Grid.Row="2" RenderTransformOrigin="0.795,1.507" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Sumaryczne dochody od" Margin="125,55,284,91" Grid.Row="1" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="początku działalności:" Margin="134,106,292,40" Grid.Row="1" /> 
+        <Button x:Name="Exit" Grid.Row="3" Grid.Column="1" Margin="213,23,87,61"  Background ="#FFC642A6" FontSize="36" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" BorderBrush="#FF181545" BorderThickness="10" Click="Return_Click" Content="Wyjście">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label x:Name="ClientsTotal" FontSize="36" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="386,55,99,93" Grid.Column="1" />
+        <Label x:Name="ActivePasses" FontSize="36" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="382,130,71,18" Grid.Column="1" />
+        <Label x:Name="OpenPasses" FontSize="36" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="376,36,77,112" Grid.Column="1" Grid.Row="1" />
+        <Label x:Name="HalfOpenPasses" FontSize="36" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="376,130,77,18" Grid.Column="1" Grid.Row="1" />
+        <Label x:Name="LimitedPasses" FontSize="36" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="376,36,77,112" Grid.Column="1" Grid.Row="2" />
+        <Label x:Name="StudentPasses" FontSize="36" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="376,128,77,20" Grid.Column="1" Grid.Row="2" />
+        <Label x:Name="FinancialMonth" FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="523,132,129,16" />
+        <Label x:Name="PassesTotal" FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="536,10,117,135" Grid.Row="3" />
+        <Label x:Name="ServicesTotal" FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="537,83,116,65" Grid.Row="3" />
+        <Label x:Name="FinancialDifference" FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="534,30,119,118" Grid.Row="2" />
+        <Label x:Name="PercentageDifference" FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="534,119,119,29" Grid.Row="2" />
+        <Label x:Name="FinancialTotal" FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="X" Margin="521,106,129,42" Grid.Row="1" />
+        <Label FontSize="30" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="w tym miesiącu:" Margin="230,132,298,12"/>
+    </Grid>
+</Window>

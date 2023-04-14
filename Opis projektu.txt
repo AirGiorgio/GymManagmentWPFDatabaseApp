@@ -1,0 +1,22 @@
+To jest pierwszy projekt jaki tworzyłem w WPF używając Xamla,
+jak również pierwsza aplikacja bazodanowa jaką kiedykolwiek stworzyłem.
+Jest to aplikacja CRUD to zarządzania klientami siłowni, ustalania cen
+usług i monitorowania statystyki finansowej.
+Na czerwono datagrid zaznacza nieaktualnych klientów.
+Aby aplikacja działała prawidłowo należy wykonać załączony skrypt w 
+pliku baza w sql serwer. 
+Ten projekt wymaga solidnej refaktoryzacji.
+Co chciałbym poprawić na dzień dzisiejszy:
+-Rejestracje z hashowaniem i soleniem haseł
+-Logowanie (pobiera do pamięci listę userów co jest absurdem)
+-Z pewnością przydałaby się konsultacja UI/UX
+-zastosowanie, gdzie to jeszcze możliwe wzorca mvvm czyli bindowanie do 
+metod odświeżających wyświetlanie się okienek.
+-ujednolicenie klas serwisowych
+-powiązania logiki biznesowej w bazie danych
+(Niejednolitość wynika z problemów z pomysłem, tzn rozwijałem aplikacje
+i dochodziłem do wniosku że chciałbym jeszcze coś dodać i tak wyszło. 
+Dotyczy to szczególnie modułów statystyki finansowej i ustalania cen).
+-Być może stworzenie klasy do migracji bazy danych
+-stworzenie DTO zamiast wyświetlania pełnych danych klientów
+

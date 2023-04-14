@@ -1,0 +1,49 @@
+﻿<Window x:Class="Gym_Managment_Test.SetPrices"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gym_Managment_Test"
+        xmlns:wpfx="clr-namespace:Xceed.Wpf.Toolkit.Obselete;assembly=Xceed.Wpf.Toolkit.NET5"
+        mc:Ignorable="d"
+        Title="SetPrices"
+         Background ="#FF181545" 
+        WindowState="Maximized"
+        WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="500"/>
+        </Grid.ColumnDefinitions>
+        <Border  Background="#FF4F33E1" Margin ="69,45,44,50" CornerRadius="100" Grid.ColumnSpan="3" Grid.RowSpan="4"/>
+        <Label FontSize="36" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Cena za karnet Open: " Margin="306,69,280,76" Grid.ColumnSpan="2" />
+        <Label FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Cena za karnet Half-Open:" Margin="212,154,280,191" Grid.RowSpan="2" />
+        <Label FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Cena za karnet Limited: " Margin="257,53,280,92" Grid.Row="1" />
+        <Label FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Cena za karnet Student: " Margin="257,156,277,189" Grid.Row="1" Grid.RowSpan="2" />
+        <Label FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Cena za trening personalny:" Margin="179,162,280,184" Grid.Row="2" Grid.RowSpan="2" />
+        <Label FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Cena za konsultację dietetyczną:" Margin="99,59,274,76" Grid.Row="3" />
+        <Label FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" Content="Cena za wejście jednorazowe: " Margin="155,55,277,90" Grid.Row="2" />
+        <TextBox x:Name="OpenPrice" FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" TabIndex="1" KeyDown="Ikeychanged" Margin="0,60,493,85" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="254" ></TextBox>
+        <TextBox x:Name="HalfOpenPrice" FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" TabIndex="2" KeyDown="Ikeychanged" Margin="253,154,493,191" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" ></TextBox>
+        <TextBox x:Name="LimitedPrice" FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" TabIndex="3" KeyDown="Ikeychanged" Margin="253,46,493,100" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" ></TextBox>
+        <TextBox x:Name="StudentPrice" FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" TabIndex="4" KeyDown="Ikeychanged" Margin="255,150,493,195" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" ></TextBox>
+        <TextBox x:Name="TrainingPrice" FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" TabIndex="5" KeyDown="Ikeychanged" Margin="257,156,493,189" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" ></TextBox>
+        <TextBox x:Name="DietPrice" FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" TabIndex="6" KeyDown="Ikeychanged" Margin="260,58,490,86" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" ></TextBox>
+        <TextBox x:Name="OneTimerPrice" FontSize="40" FontWeight="Bold" Foreground="#FFC63CA6" TabIndex="7" KeyDown="Ikeychanged" Margin="257,52,493,94" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" ></TextBox>
+        <Button x:Name="Exit" Grid.Row="3" Grid.Column="2" Margin="80,19,80,65"  Background ="#FFB71090" FontSize="36" FontWeight="Bold" Foreground="White"  FontFamily="Sitka Small" FontStyle="Italic" BorderBrush="#FF181545" BorderThickness="10" Click="Return_Click" Content="Zapisz i Wyjdź">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
+
