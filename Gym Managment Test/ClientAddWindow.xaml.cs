@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gym_Managment_Test.Repos;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.Metrics;
 using System.Linq;
@@ -15,58 +16,55 @@ using System.Windows.Shapes;
 
 namespace Gym_Managment_Test
 {
-    /// <summary>
-    /// Logika interakcji dla klasy ClientAddView.xaml
-    /// </summary>
+ 
     public partial class ClientAddView : Window
     {
         List<decimal> Prices;
-        public ClientAddView() //to okienko służy do dodania klienta
+        public int Id { get; set; } = 0;
+        public ClientAddView()                                   //to okienko służy do dodania klienta
         {
             InitializeComponent();
 
             UpdateView uv = new UpdateView();
-            this.category.ItemsSource = uv.Update();  //idzie zapytanie do bazy danych o wypełnienie comboboxa aktualnymi typami karnetu
-            Prices = uv.GetPrices();                   //idzie zapytanie do bazy danych o pobranie aktualnych cen karnetów
+            this.category.ItemsSource = uv.Update();           //combobox wypełniony
+            Prices = uv.GetPrices();                           //aktualne ceny karnetów
         }
-        public ClientAddView(int i)   //to okienko służy do edycji, wylącza możliwość dodania typu karnetu  
+        public ClientAddView(int i)                             //to okienko służy do edycji, wylącza możliwość dodania typu karnetu  
         {
             InitializeComponent();
             combo.Visibility = Visibility.Hidden;
             Id = i;
-            Add.Content = "Uaktualnij";
-            GetClient(Id);                     //idzie zapytanie do bazy danych o wypełnienie pól tekstowych aktualnymi danymi klienta
+            Add.Content = "Uaktualnij";  
+            GetClientById(Id);                                  //idzie zapytanie do bazy danych o wypełnienie pól tekstowych aktualnymi danymi klienta
         }
 
-        private void GetClient(int id)
-        {
-            DbModel db = new DbModel();
-            var inquiry = (from client in db.Clients where client.Id.Equals(id) select client).FirstOrDefault();
+        private void GetClientById(int id)
+        {  
+            ClientRepo clientRepo = new ClientRepo();
+            var inquiry = clientRepo.GetClientById(id); 
+
             if (inquiry!=null)
             {
                 Name.Text = inquiry.Name;
                 Surname.Text = inquiry.Surname;
-                BirthDate.Mask = null;                                         //masked text box jest dosyć problematyczny, najpierw wyłączam maskę
-                BirthDate.Text = inquiry.BirthDate.ToString("yyyy-MM-dd");      //maska tworzy się na nowo automatycznie formatem daty z bazy danych 
+                BirthDate.Mask = null;                                         
+                BirthDate.Text = inquiry.BirthDate.ToString("yyyy-MM-dd");      
                 Telephone.Text = inquiry.Telephone;
                 PESEL.Text = inquiry.PESEL;
                 category.Text = " ";
             }
         }
 
-        private int Id = 0;  //domyślnie zero, chyba że zostanie nadpisany
-
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+            ClientRepo cp = new ClientRepo();
             string message = "";
-            Error error;
             message = validate(message);
 
             if (Id == 0 && message == "")                   //jeśli wywołane zostało pierwsze okienko a więc ID pozostało 0 następuje operacja dodania klienta
             {
                 try
                 {
-                    ClientAddOperation cp = new ClientAddOperation();
                     cp.ClientAdd(
                     Name.Text.Trim(),
                     Surname.Text.Trim(),
@@ -76,27 +74,24 @@ namespace Gym_Managment_Test
                     category.SelectedIndex + 1
                     );
 
-                    PaymentAddOperation pay = new PaymentAddOperation();    // dodanie płatności do bazy danych
-                    pay.Add("karnet", Prices[category.SelectedIndex]);      //tabela do statystki finansowej
+                    PaymentRepo pay = new PaymentRepo();                           // dodanie płatności do bazy danych
+                    pay.AddPayment("karnet", Prices[category.SelectedIndex]);      //tabela do statystki finansowej
 
-                    message = "Pomyślnie dodano klienta!";                 //uda się jeśli metoda validate nie zmieni message           
-                    error = new Error(message);
-                    error.Show();
+                    message = "Pomyślnie dodano klienta!";                                   
+                    WindowServices.ShowMessageWindow(message);
                 }
                 catch (System.FormatException)
                 {
                     message = "Niepoprawne dane!";
-                    error = new Error(message);
-                    error.Show();
+                    WindowServices.ShowMessageWindow(message);
                     return;
                 }
             }
 
-            else if (Id != 0 && message == "")         //jeśli wywołane zostało drugie okienko i Id !=0  następuje operacja edycji klienta
+            else if (Id != 0 && message == "")                         //jeśli wywołane zostało drugie okienko i Id !=0  następuje operacja edycji klienta
             {
                 try
                 {
-                    ClientEditOperation cp = new ClientEditOperation();
                     cp.ClientEdit(
                         Id,
                     Name.Text,
@@ -106,15 +101,13 @@ namespace Gym_Managment_Test
                     PESEL.Text
                     );
 
-                    message = "Pomyślnie uaktualniono klienta!";         //uda się jeśli metoda validate nie zmieni message 
-                    error = new Error(message);                       
-                    error.Show();
+                    message = "Pomyślnie uaktualniono klienta!";                  //uda się jeśli metoda validate nie zmieni message 
+                    WindowServices.ShowMessageWindow(message);
                 }
                 catch (System.FormatException)        
                 {
                     message = "Niepoprawne dane!";
-                    error = new Error(message);
-                    error.Show();
+                    WindowServices.ShowMessageWindow(message);
                     return;
                 }
             }  
@@ -126,29 +119,25 @@ namespace Gym_Managment_Test
             || string.IsNullOrEmpty(PESEL.Text) || string.IsNullOrEmpty(category.Text)) 
             {
                 string message = "Nie wypełniono wszystkich pól!";
-                Error error = new Error(message);
-                error.Show();
+                WindowServices.ShowMessageWindow(message);
                 return msg = " ";
             }
             else if (Name.Text.Length >= 25 || Surname.Text.Length >= 25)
             {
                 string message = "Imię lub nazwisko klienta są zbyt długie! Wprowadź akronim!";
-                Error error = new Error(message);
-                error.Show();
+                WindowServices.ShowMessageWindow(message);
                 return msg = " ";
             }
             else if (PESEL.Text.Length  > 11)
             {
                 string message = "Niepoprawna długość PESEL!";
-                Error error = new Error(message);
-                error.Show();
+                WindowServices.ShowMessageWindow(message);
                 return msg = " ";
             }
             else if (Telephone.Text.Length > 9)
             {
                 string message = "Niepoprawny numer telefonu!";
-                Error error = new Error(message);
-                error.Show();
+                WindowServices.ShowMessageWindow(message);
                 return msg = " ";
             }
             return msg;
@@ -160,7 +149,7 @@ namespace Gym_Managment_Test
                 e.Handled = true;
             }
         }
-        private void Wkeychanged(object sender, KeyEventArgs e)          //możliwość wpisywania tylko cyfr w Pesel i telefon i pomijania tab 
+        private void Wkeychanged(object sender, KeyEventArgs e)                    //możliwość wpisywania tylko cyfr w Pesel i telefon i pomijania tab 
         {
             if (!(e.Key >= Key.D0 && e.Key <= Key.D9 || e.Key == Key.Tab))
             {
@@ -168,14 +157,10 @@ namespace Gym_Managment_Test
             }
         }
 
-        private void Return_Click(object sender, RoutedEventArgs e)
+        private void Return_Click(object sender, RoutedEventArgs e)               
         {
-            ClientViewWindow aw = (ClientViewWindow)Application.Current.Windows.Cast<Window>().SingleOrDefault(w => { return w.GetType().ToString() == "Gym_Managment_Test.ClientViewWindow"; });
-            if (aw != null)
-            {
-                aw.Update();
-            }
-            this.Close();                              //triggerowanie metody poprzedniego okienka, aby się odświeżył widok klientów automatycznie przy zamykaniu tego okienka
+            WindowServices.UpdateClientsView();
+            this.Close();                                          
         }
 
     }

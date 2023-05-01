@@ -16,8 +16,9 @@ namespace Gym_Managment_Test
 {
     public class UpdateView
     {
+        DbModel db = new DbModel();
         private DataGrid list;
-        public DataGrid Update(DataGrid list)        //wypełnienie datagrid danymi klientów
+        public DataGrid Update(DataGrid list)                      //wypełnienie datagrid danymi klientów
         {
             this.list = list;
             var db = new DbModel();
@@ -29,10 +30,10 @@ namespace Gym_Managment_Test
             list.ItemsSource = result;
             return  list;
         }
-        public DataGrid Update(DataGrid list, string c)  //wypełnienie datagrid danymi klientów na szukane litery nazwiska
+        public DataGrid Update(DataGrid list, string c)                 //wypełnienie datagrid danymi klientów na szukane litery nazwiska
         {
             this.list = list;
-            var db = new DbModel();
+            
             var inquiry = from client in db.Clients
                             where client.Surname.StartsWith(c)
                             select client;                           
@@ -42,17 +43,15 @@ namespace Gym_Managment_Test
             return list;
         }
 
-        public List<string> Update()         //wypełnienie comboboxa danymi o karnetach
+        public List<string> Update()                                  //wypełnienie comboboxa danymi o karnetach
         {
-            DbModel db = new DbModel();
             var inquiry = from gympasses in db.GymPasses select gympasses.Name;
             List<string> list = inquiry.ToList();
             
             return list;  
         }
-        public List<decimal> GetPrices()        //pobranie cen karnetów
-        {
-            DbModel db = new DbModel();
+        public List<decimal> GetPrices()                             //pobranie cen karnetów
+        {   
             var inquiry = from gympasses in db.GymPasses select gympasses.Price;
             List<decimal> Prices = inquiry.ToList();
             return Prices;

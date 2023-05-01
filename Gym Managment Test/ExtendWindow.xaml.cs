@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gym_Managment_Test.Repos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,8 @@ namespace Gym_Managment_Test
     public partial class ExtendWindow : Window
     {
         List<decimal> Prices;
+        public int ID { get; set; }
+
         public ExtendWindow(int i)
         {
             InitializeComponent();
@@ -29,8 +32,7 @@ namespace Gym_Managment_Test
             this.category.ItemsSource = uv.Update();                //zapytanie z bazy danych wypełniające combobox aktualnymi danymi karnetów
             Prices = uv.GetPrices();                                
         }
-        private int ID;
-
+    
         private void Return_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -47,17 +49,13 @@ namespace Gym_Managment_Test
                 return;  
             }
             string passvalue = category.Text;
-            ClientExtendOperation ced = new ClientExtendOperation();          
-            ced.ClientExtend(ID, category.SelectedIndex+1, passvalue);    //problematyczne 
+            ClientRepo ced = new ClientRepo();          
 
-            PaymentAddOperation pay = new PaymentAddOperation();     //dodawanie płatności, jak w client add window
-            pay.Add("karnet", Prices[category.SelectedIndex]);
+            ced.ClientExtend(ID, category.SelectedIndex+1, passvalue);     
 
-            ClientViewWindow aw = (ClientViewWindow)Application.Current.Windows.Cast<Window>().SingleOrDefault(w => { return w.GetType().ToString() == "Gym_Managment_Test.ClientViewWindow"; });
-            if (aw != null)
-            {
-                aw.Update();                  //uaktualnienie widoku
-            }
+            PaymentRepo pay = new PaymentRepo();                             //dodawanie płatności 
+            pay.AddPayment("karnet", Prices[category.SelectedIndex]);
+            WindowServices.UpdateClientsView();
             this.Close();
 
             message = "Uaktualniono karnet!";

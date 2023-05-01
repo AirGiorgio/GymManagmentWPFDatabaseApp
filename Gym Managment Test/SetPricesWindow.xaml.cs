@@ -28,8 +28,8 @@ namespace Gym_Managment_Test
             GetData();
         }
 
-        List<GymPassView> inquiry1; 
-        List<ServicesModel> inquiry2;
+        List<GymPass> inquiry1; 
+        List<Services> inquiry2;
         List<decimal> i1= new List<decimal>();
         List<decimal> i2= new List<decimal>();
         List<string> in1;
@@ -40,13 +40,12 @@ namespace Gym_Managment_Test
         public void GetData()
         {
             DbModel db = new DbModel();
-            
             try
             {
-                inquiry1 = (from gympasses in db.GymPasses select gympasses).ToList();  //zapytanie z tabeli karnety
-                inquiry2 = (from services in db.Services select services).ToList(); //zapytanie z tabeli usługi
+                inquiry1 = (from gympasses in db.GymPasses select gympasses).ToList();            //zapytanie z tabeli karnety
+                inquiry2 = (from services in db.Services select services).ToList();               //zapytanie z tabeli usługi
                
-                if (inquiry1 != null && inquiry2 !=null)            //wypełnienie pól tekstowych cenami karnetów lub usług
+                if (inquiry1 != null && inquiry2 !=null)            
                  {
                      OpenPrice.Text = Math.Round(inquiry1.FirstOrDefault(x => x.Name == "Open").Price, 2).ToString();      
                      HalfOpenPrice.Text = Math.Round(inquiry1.FirstOrDefault(x => x.Name == "Half Open").Price, 2).ToString(); 
@@ -59,16 +58,16 @@ namespace Gym_Managment_Test
             }
             catch (NullReferenceException)
             {
-                Error error = new Error("Wystąpiły problemy z ładowaniem wartości!"); error.Show();
+                WindowServices.ShowMessageWindow("Wystąpiły problemy z ładowaniem wartości!"); 
                 this.Close();
             }
         }
 
-        private void Return_Click(object sender, RoutedEventArgs e)   //jeśli użytkownik kliknie wyjdź, następuje sekwencja metod
+        private void Return_Click(object sender, RoutedEventArgs e)                         //jeśli użytkownik kliknie wyjdź, następuje sekwencja metod
         {
             CompareValues(); 
         }
-        private void CompareValues()     //metoda porównawcza,
+        private void CompareValues()                  
         {   
             try
             {
@@ -77,18 +76,18 @@ namespace Gym_Managment_Test
                 in1 = new List<string>() { OpenPrice.Text, HalfOpenPrice.Text, LimitedPrice.Text, StudentPrice.Text, OneTimerPrice.Text };
                 in2 = new List<string>() { TrainingPrice.Text, DietPrice.Text };
 
-                foreach (var item in in1)            //czy wartości da się przekonwertować, czy format danych jest niepoprawny?
+                foreach (var item in in1)                                //czy wartości da się przekonwertować, czy format danych jest niepoprawny?
                 {
                     i1.Add(decimal.Parse(item));
                 }
-                foreach (var item in in2)            //czy wartości da się przekonwertować, czy format danych jest niepoprawny?
+                foreach (var item in in2)                                 
                 {
                     i2.Add(decimal.Parse(item));
                 }
             }
             catch (FormatException)
             {
-                Error error = new Error("Nieprawidłowy format wartości!"); error.Show();
+                WindowServices.ShowMessageWindow("Nieprawidłowy format wartości!");
                 GetData();
                 return;
             }
@@ -111,16 +110,9 @@ namespace Gym_Managment_Test
 
             if (HasChanged)
             {
-                Confirmation c= (Confirmation)Application.Current.Windows.Cast<Window>().SingleOrDefault(w => { return w.GetType().ToString() == "Gym_Managment_Test.Confirmation"; });
-                if (c != null)
-                {
-                    c.Activate();
-                }
-                else
-                {
-                    Confirmation con = new Confirmation(); con.Show(); con.Focus();
-                    HasChanged = false;
-                }
+                WindowServices.ShowOrActivateWindow(typeof(Confirmation), "Gym_Managment_Test.Confirmation");
+                HasChanged = false;
+  
             }
             else
             {
@@ -149,18 +141,10 @@ namespace Gym_Managment_Test
             }
             catch (Exception ex)
             {
-                Error error = (Error)Application.Current.Windows.Cast<Window>().SingleOrDefault(w => { return w.GetType().ToString() == "Gym_Managment_Test.Error"; });
-                if (error != null)
-                {
-                    error.Activate();
-                }
-                else
-                {
-                   Error con = new Error("Wystąpił błąd: "+ ex.Message); con.Show(); con.Focus(); 
-                }
+                WindowServices.ShowMessageWindow("Wystąpił błąd: "+ ex.Message);  
             }
         }
-        private void Ikeychanged(object sender, KeyEventArgs e)  //aby można było wpisywać tylko cyfry i przecinki
+        private void Ikeychanged(object sender, KeyEventArgs e)               //tylko cyfry i przecinki
         {
             if (!(e.Key >= Key.D0 && e.Key <= Key.D9 || e.Key == Key.Tab || e.Key == Key.OemComma && e.KeyboardDevice.Modifiers == ModifierKeys.None))
             {

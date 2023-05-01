@@ -24,7 +24,7 @@ namespace Gym_Managment_Test
         {
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            TBlock.Text = message;                                              //wyświetla tekst błędu
+            TBlock.Text = message;                                             
         }
 
         private void Return_Click(object sender, RoutedEventArgs e)

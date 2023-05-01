@@ -1,0 +1,99 @@
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test.csproj.AssemblyReference.cache
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\ClientAddWindow.g.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\ClientViewWindow.g.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\ConfirmationWindow.g.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\ErrorWindow.g.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\ExtendWindow.g.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\FinancialStatisticsWindow.g.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\LoginWindow.g.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\MainMenuWindow.g.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\SetPricesWindow.g.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test_Content.g.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test_MarkupCompile.cache
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test_MarkupCompile.lref
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Image\0002855_bodybuilder-16-weightlifting-gym-decor-silhouette-decals_550.jpg
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Image\1.png
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Image\Gym-Silhoutte-PNG-Transparent.png
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Image\179b4b4e65fe8bd9f5f8b7a03ee6febc.png
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Image\676-6766767_woman-female-weightlifter-silhouette-hd-png-download.png
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Gym Managment Test.exe
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Gym Managment Test.deps.json
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Gym Managment Test.runtimeconfig.json
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Gym Managment Test.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Gym Managment Test.pdb
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\EntityFramework.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.NET5.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.Themes.Aero.NET5.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.Themes.Metro.NET5.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.Themes.VS2010.NET5.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Xceed.Wpf.Toolkit.NET5.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\cs-CZ\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\de\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\es\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\fr\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\hu\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\it\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\ja-JP\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\pt-BR\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\ro\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\ru\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\sv\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\App.baml
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\ClientAddWindow.baml
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\ClientViewWindow.baml
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\ConfirmationWindow.baml
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\ErrorWindow.baml
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\ExtendWindow.baml
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\FinancialStatisticsWindow.baml
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\LoginWindow.baml
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\MainMenuWindow.baml
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\SetPricesWindow.baml
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test.g.resources
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test.AssemblyInfoInputs.cache
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test.AssemblyInfo.cs
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test.csproj.CoreCompileInputs.cache
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test.csproj.CopyComplete
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\refint\Gym Managment Test.dll
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test.pdb
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\Gym Managment Test.genruntimeconfig.cache
+C:\Users\Jan Klata\Desktop\Gym Managment Test\Gym Managment Test\obj\Debug\net6.0-windows\ref\Gym Managment Test.dll

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gym_Managment_Test.Repos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,8 +24,8 @@ namespace Gym_Managment_Test
         {
             InitializeComponent();
 
-            ViewFinancials vf = new ViewFinancials();
-            FinancialModel model = vf.ViewStatistics();
+            PaymentRepo PR = new PaymentRepo();
+            Financial model = PR.ViewStatistics();
 
             ClientsTotal.Content = model.ClientsTotal.ToString(); //ilość klientów w sumie
 

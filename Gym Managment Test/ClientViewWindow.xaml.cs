@@ -25,36 +25,26 @@ namespace Gym_Managment_Test
        public ClientViewWindow()
         {
             InitializeComponent();
-            Update();
+            UpdateView();
         }
-        public void Update()              //odświeża automatycznie datagrid zapytaniem z bazy danych
+        public void UpdateView()                         //odświeża automatycznie datagrid zapytaniem z bazy danych
         {
             UpdateView uv = new UpdateView();
             DataGridList = uv.Update(this.DataGridList);
-            
         }
-        public void Update(string c)    // datagrid wypełniony tylko klientami których użytkownik szuka po nazwisku - string c
+        public void Update(string c)                         // datagrid wypełniony tylko klientami których użytkownik szuka po nazwisku  
         {
             UpdateView uv = new UpdateView();
             DataGridList = uv.Update(this.DataGridList, c);
         }
-        private int validateDataGrid()       //do operacji edycji lub usunięcia zaznaczonego klienta musi być Id 
+        private int validateDataGrid()                          //do operacji edycji lub usunięcia zaznaczonego klienta musi być Id 
         {
-            ClientModel c = (ClientModel)DataGridList.SelectedItem;
+            Client c = (Client)DataGridList.SelectedItem;
             return c.Id;
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            var existingWindow = Application.Current.Windows.Cast<Window>().SingleOrDefault(w => { return w.GetType().ToString() == "Gym_Managment_Test.ClientAddWindow"; });
-            if (existingWindow != null)
-            {
-                existingWindow.Activate();
-                return;
-            }
-            else
-            {
-                ClientAddView cav = new ClientAddView(); cav.Show(); cav.Focus();    //Okienko przeciążone, dodaje użytkownika, nie pobiera nic
-            }
+            WindowServices.ShowOrActivateWindow(typeof(ClientAddView), "ClientAddWindow");
         }
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
@@ -62,16 +52,7 @@ namespace Gym_Managment_Test
             {
                 return;
             }
-            var existingWindow = Application.Current.Windows.Cast<Window>().SingleOrDefault(w => { return w.GetType().ToString() == "Gym_Managment_Test.ClientAddWindow"; });
-            if (existingWindow != null)
-            {
-                existingWindow.Activate();
-                return;
-            }
-            else
-            {
-                ClientAddView cav = new ClientAddView(validateDataGrid()); cav.Show(); cav.Focus();  //Okienko przeciązone, edytuje użytkownika, pobiera int ID
-            } 
+            WindowServices.ShowEditWindow(validateDataGrid());
         }
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
@@ -79,16 +60,7 @@ namespace Gym_Managment_Test
             {
                 return;
             }
-            var existingWindow = Application.Current.Windows.Cast<Window>().SingleOrDefault(w => { return w.GetType().ToString() == "Gym_Managment_Test.Confirmation"; });
-            if (existingWindow != null)
-            {
-                existingWindow.Activate();
-                return;
-            }
-            else
-            {
-             Confirmation c = new Confirmation(validateDataGrid()); c.Show(); c.Focus();  //Ta metoda usuwa użytkownika, pobiera int ID
-            }
+            WindowServices.ShowConfirmationWindow(validateDataGrid());
         }
         private void Extendcarnet_Click(object sender, RoutedEventArgs e)
         {
@@ -96,26 +68,20 @@ namespace Gym_Managment_Test
             {
                 return;
             }
-            var existingWindow = Application.Current.Windows.Cast<Window>().SingleOrDefault(w => { return w.GetType().ToString() == "Gym_Managment_Test.ExtendWindow"; });
-            if (existingWindow != null)
-            {
-                existingWindow.Activate();
-                return;
-            }
-            ExtendWindow ce = new ExtendWindow(validateDataGrid()); ce.Show(); ce.Focus();
+            WindowServices.ShowExtendWindow(validateDataGrid());
         }
 
         private void Return_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-        private void SearchHandler(object sender, KeyEventArgs e)        //Szukanie użytkownika , delegat od Key Up i Key Down w kodzie xaml
+        private void SearchHandler(object sender, KeyEventArgs e)        //Szukanie użytkownika 
         {
-            if (e.Key != Key.Enter) //ale wyłączamy enter bo może namieszać
+            if (e.Key != Key.Enter)                                      //wyłączamy enter
             {
                 if (SearchBox.Text == "")
                 {
-                    Update();
+                    UpdateView();
                 }
                 else
                 {
@@ -126,7 +92,7 @@ namespace Gym_Managment_Test
    
         private void DataGridList_LoadingRow(object sender, DataGridRowEventArgs e)     //wyświetl klienta na czerwono jesli jego karnet się skończył
         { 
-            ClientModel client = e.Row.DataContext as ClientModel;
+            Client client = e.Row.DataContext as Client;
 
             if (client.ExpDate < DateTime.Now.Date)
             {
